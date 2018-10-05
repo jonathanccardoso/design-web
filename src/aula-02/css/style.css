@@ -1,0 +1,6 @@
+body{
+	background-image: url(../images/bg.png), url(../images/outubrorosa.png);
+	background-repeat: repeat-x, no-repeat;
+	background-position: top, right, bottom;
+	background-attachment: scroll, fixed;
+}
