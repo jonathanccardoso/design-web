@@ -1,5 +1,8 @@
 import pygame, sys, time, random
 
+import pygame
+from pygame.locals import *
+
 #move left and right
 def move_player(ship,ship_rect,keys):
     if keys[pygame.K_LEFT]:
@@ -57,13 +60,7 @@ while True:
   keys = pygame.key.get_pressed()
 
   #player win
-  '''if player1_win == True:
-  	game_over = game_over_font_big.render("GAME OVER", True, WHITE, BLACK)
-    game_over1 = game_over_font_small.render("Player 1 Wins", True, WHITE, BLACK)
-  elif player2_win == True:
-    game_over = game_over_font_big.render("GAME OVER", True, WHITE, BLACK)
-    game_over1 = game_over_font_small.render("Player 2 Wins", True, WHITE, BLACK)'''
-
+  
   move_player(ship,ship_rect,keys)
   
   #logica para a direção da bola
