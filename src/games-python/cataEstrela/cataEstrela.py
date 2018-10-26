@@ -105,8 +105,8 @@ while True:
       spd_y += (math.sin(math.radians(ang)))
   spd_x = spd_x * 0.95
   spd_y = spd_y * 0.95
-  new_x = round((ship_rect.center[0] + spd_x)%display.get_rect().width)
-  new_y = round((ship_rect.center[1] + spd_y)%display.get_rect().height)
+  new_x = round((ship_rect.center[0] + spd_x) % display.get_rect().width)
+  new_y = round((ship_rect.center[1] + spd_y) % display.get_rect().height)
 
   ship_rect.center = (new_x,new_y)
   #capturar stars para capturar

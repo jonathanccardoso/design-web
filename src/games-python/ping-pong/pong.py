@@ -25,8 +25,6 @@ UP2 = False
 DOWN2 = False
 NO_MOVEMENT2 = True
 
-
-
 ### Ball Stuff ###
 
 UPLEFT = 0
@@ -40,23 +38,15 @@ DOWNRIGHT = 3
 pygame.mixer.music.load("endofline.ogg")
 sound_effect = pygame.mixer.Sound("beep.wav")
 
-
-
-
 ### colors ###
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-
 
 
 ### Creating the main surface ###
 
 main_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 surface_rect = main_surface.get_rect()
-
-
-
-
 
 
 class Paddle(pygame.sprite.Sprite):
@@ -104,8 +94,6 @@ class Paddle(pygame.sprite.Sprite):
                 pass
 
 
-
-
 class Ball(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -141,20 +129,12 @@ class Ball(pygame.sprite.Sprite):
             self.direction = UPLEFT
         if self.rect.y > surface_rect.bottom and self.direction == DOWNRIGHT:
             self.direction = UPRIGHT
-
-
     
-        
         
 basic_font = pygame.font.SysFont("Helvetica", 120)
 game_over_font_big = pygame.font.SysFont("Helvetica", 72)
 game_over_font_small = pygame.font.SysFont("Helvetica", 50)
 
-
-
-
-
-    
 
 paddle1 = Paddle(1)
 paddle2 = Paddle(2)
@@ -246,8 +226,6 @@ while True:
     score_board_rect = score_board.get_rect()
     score_board_rect.centerx = surface_rect.centerx 
     score_board_rect.y = 10
-
-    
     
 
     main_surface.fill(BLACK)
@@ -346,12 +324,3 @@ while True:
     main_surface.blit(game_over1, game_over1_rect)
 
     pygame.display.update()
-
-    
-
-
-
-
-
-
-
