@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <style media="screen">
+        label[for] {
+            display: block; /**/
+            float:left; /*posicao esquerda*/
+            width:10em; /*tamanho comprimento*/
+            background-color:pink; /*cor de fundo rosa*/
+        }
+        .textblue {
+            color:blue;
+        }
+        input[type="text"]{
+            background-color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <!-- tem que ter uma tag de form para cada formulario que tiver na página -->
+    <form action="resposta.html" method="POST"><!-- atributo action recebe o nome do arquivo que irá processar os dados --> <!-- o GET os dados são mostrados na URL e o POST não mostra. -->
+        <fieldset class="textblue">
+            <!-- marcação de fieldset é opcional, para organizar os formulario -->
+            <legend>Identificação</legend><!-- legend é um rotulo do fieldset, os dois trabalham juntos -->
+            <div>
+                <label for="nome">Nome: </label><!-- -->
+                <input id="nome" type="text" name="nome" required />
+            </div>
+            <div>
+                <label for="senha">Senha: </label>
+                <input id="senha type="password" name="senha" /><!-- O name e o id é para adicionar um nome no campo -->
+            </div>
+            <div>
+                <label for="confsenha">Confirma Senha: </label>
+                <input type="password" required placeholder="Senha... " name="confsenha" id="confsenha" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" />
+            </div>
+            <div>
+                <label for="email">E-mail: </label><!-- ele verifica se o e_-mail é valido -->
+                <input type="email" name="email" id="email" />
+            </div>
+
+            <div>
+                <label for="site">Site: </label>
+                <input type="file" name="foto" id="foto" />
+            </div>
+
+            <div>
+                <label for="dnasc">data de nascimento: </label>
+                <input type="date" name="dnasc" id="dnasc" />
+            </div>
+
+            <div>
+                <label for="país">País: </label>
+                <input list="país" />
+                <datalist id="país">
+                    <option value="Brasil">Brasil</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="Espanha">Espanha</option>
+                    <option value="Argentina">Argentina</option>
+                </datalist>
+            </div>
+
+            <div>
+                <label for="uf">UF: </label>
+                <select id="uf" name="uf">
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Escolaridade</legend>
+
+            <label>
+                <input type="radio" name="escola" value="medio" /> Médio
+            </label>
+            <label>
+                <input type="radio" name="escola" value="sup" /> Superior
+            </label>
+            <label>
+                <input type="radio" name="escola" value="msc" /> Mestrado
+            </label>
+            <label>
+                <input type="radio" name="escola" value="dr" /> Doutorado
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Áreas de interesse</legend>
+            <label>
+                <input type="checkbox" name="areas" value="design"> Design
+            </label>
+            <label>
+                <input type="checkbox" name="areas" value="manutencao"> Manutenção
+            </label>
+            <label>
+                <input type="checkbox" name="areas" value="redes"> Redes
+            </label>
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
